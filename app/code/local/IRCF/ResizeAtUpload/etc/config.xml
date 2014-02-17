@@ -1,0 +1,49 @@
+<?xml version="1.0"?> 
+<config>
+    <modules>
+        <IRCF_ResizeAtUpload>
+            <version>0.1.0</version>
+        </IRCF_ResizeAtUpload>
+    </modules>
+    <admin>
+        <routers>
+            <adminhtml>
+            	<args>
+		            <modules>
+		            	<ircf_resizeatupload before="Mage_Adminhtml">IRCF_ResizeAtUpload</ircf_resizeatupload>
+		            </modules>
+		        </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+		<acl>
+			<resources>
+				<admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <resizeatupload>
+                                            <title>IRCF Resize At Upload Module Section</title>
+                                        </resizeatupload>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+		    </resources>
+		</acl>
+	</adminhtml>
+    <default>
+        <resizeatupload>
+            <settings>
+                <enable>1</enable>
+                <maxwidth>1140</maxwidth>
+                <maxheight>1080</maxheight>
+            </settings>
+        </resizeatupload>
+    </default>
+</config>

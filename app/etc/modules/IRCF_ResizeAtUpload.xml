@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+	    <IRCF_ResizeAtUpload>
+	        <active>true</active>
+	        <codePool>local</codePool>
+	    </IRCF_ResizeAtUpload>
+	</modules>
+</config>
